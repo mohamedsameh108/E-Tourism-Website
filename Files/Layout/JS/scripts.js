@@ -1,5 +1,7 @@
 $(document).ready(function () {
-
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        Swal.fire('For the best experience on Website, Please use PC or Lab Top')
+    }
     $("#header").hide();
 
     $(window).scroll(function () {
@@ -30,16 +32,32 @@ function sendMessage() {
         messageBody = " sent you a new message";
     }
     if (document.getElementById("inputFirstName").value.length == 0) {
-        alert("Please, Write your first name first.")
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Please, Write your first name.',
+          })
     }
     else if (document.getElementById("inputLastName").value.length == 0) {
-        alert("Please, Write your last name first.")
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Please, Write your last name.',
+          })
     }
     else if (document.getElementById("inputEmail").value.length == 0) {
-        alert("Please, Write your email first.")
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Please, Write your email.',
+          })
     }
     else if (document.getElementById("messageDetails").value.length == 0) {
-        alert("Please, Write your project details first.")
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Please, Write your message.',
+          })
     }
     else {
         Email.send({
@@ -50,7 +68,13 @@ function sendMessage() {
             Body: document.getElementById("messageDetails").value,
         })
             .then(function () {
-                alert("Message sent successfully to E-Tourism Team.\nThanks.\n")
+                Swal.fire({
+                    position: 'center',
+                    icon: 'success',
+                    title: 'Message sent successfly to E-Tourism Team\nThanks',
+                    showConfirmButton: false,
+                    timer: 2000
+                  })
             });
     }
 }
