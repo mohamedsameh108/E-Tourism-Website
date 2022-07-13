@@ -1,7 +1,7 @@
+if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+    Swal.fire('For the best experience on Website, Please use PC or Lab Top')
+}
 $(document).ready(function () {
-    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-        Swal.fire('For the best experience on Website, Please use PC or Lab Top')
-    }
     $("#header").hide();
 
     $(window).scroll(function () {
@@ -36,28 +36,28 @@ function sendMessage() {
             icon: 'error',
             title: 'Oops...',
             text: 'Please, Write your first name.',
-          })
+        })
     }
     else if (document.getElementById("inputLastName").value.length == 0) {
         Swal.fire({
             icon: 'error',
             title: 'Oops...',
             text: 'Please, Write your last name.',
-          })
+        })
     }
     else if (document.getElementById("inputEmail").value.length == 0) {
         Swal.fire({
             icon: 'error',
             title: 'Oops...',
             text: 'Please, Write your email.',
-          })
+        })
     }
     else if (document.getElementById("messageDetails").value.length == 0) {
         Swal.fire({
             icon: 'error',
             title: 'Oops...',
             text: 'Please, Write your message.',
-          })
+        })
     }
     else {
         Email.send({
@@ -74,7 +74,7 @@ function sendMessage() {
                     title: 'Message sent successfly to E-Tourism Team\nThanks',
                     showConfirmButton: false,
                     timer: 2000
-                  })
+                })
             });
     }
 }
