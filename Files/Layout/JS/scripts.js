@@ -1,7 +1,7 @@
-if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-    Swal.fire('For the best experience on Website, Please use PC or Lab Top')
-}
 $(document).ready(function () {
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        Swal.fire('For the best experience on Website, Please use PC or Lab Top')
+    };
     $("#header").hide();
 
     $(window).scroll(function () {
