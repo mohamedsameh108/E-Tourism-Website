@@ -1,31 +1,29 @@
 $(document).ready(function () {
     var sectionName;
     var path = window.location.pathname;
-    var page = path.split("/").pop();
-    console.log(page);
-    if (page == "Index.html") {
-        sectionName = "#services";
-        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-            Swal.fire("For the best experience on Website, Please use PC or Lab Top");
-        };
-    }
-    else {
+    var page = path.split("/");
+    if (page.includes("Files")) {
         sectionName = "#tour";
         if (!/Android|!webOS|!iPhone|!iPad|!iPod|!BlackBerry|!IEMobile|!Opera Mini/i.test(navigator.userAgent)) {
             Swal.fire("For the VR tour, Please use Mobile");
         };
-        if(/Android/i.test(navigator.userAgent))
-        {
+        if (/Android/i.test(navigator.userAgent)) {
             var iframeElement = document.getElementById("iframeTour");
             iframeElement.remove();
             var apkDownloader = document.createElement("a");
-            apkDownloader.setAttribute('download', '../../Sights/gizaPyramidsFiles/mobile/E-Tourism Giza Pyramids.apk')
+            apkDownloader.setAttribute('download', '../../Sights/gizaPyramidsFiles/mobile/E-Tourism Giza Pyramids.apk');
             var icon = document.createElement("i");
             icon.classList.add("fa-solid");
             icon.classList.add("fa-file-arrow-down");
             apkDownloader.appendChild(icon);
             document.getElementById("tourContent").appendChild(apkDownloader);
         }
+    }
+    else {
+        sectionName = "#services";
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+            Swal.fire("For the best experience on Website, Please use PC or Lab Top");
+        };
     }
     $("#header").hide();
 
