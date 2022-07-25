@@ -17,8 +17,7 @@ $(document).ready(function () {
             var alertDivParagraph = document.createElement("p");
             alertDivParagraph.appendChild(document.createTextNode("Unfortunately you can't open browser version on phone. we recommend use application on phone or open website on PC or Lap Top."));
             var appLink = document.createElement("a");
-            appLink.href = "../../Sights/gizaPyramidsFiles/mobile/E-Tourism Giza Pyramids.apk";
-            appLink.download = true;
+            appLink.download = "../../Sights/gizaPyramidsFiles/mobile/E-Tourism Giza Pyramids.apk";
             appLink.text = "Download app now";
             alertDivParagraph.appendChild(appLink);
             alertDiv.appendChild(alertDivParagraph);
