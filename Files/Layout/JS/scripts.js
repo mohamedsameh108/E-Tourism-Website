@@ -10,11 +10,14 @@ $(document).ready(function () {
         if (/Android/i.test(navigator.userAgent)) {
             var iframeElement = document.getElementById("iframeTour");
             iframeElement.remove();
-            var icon = document.createElement("i");
-            icon.setAttribute("download" ,"../../Sights/gizaPyramidsFiles/mobile/E-Tourism Giza Pyramids.apk");
-            icon.classList.add("fa-solid");
-            icon.classList.add("fa-file-arrow-down");
-            document.getElementById("tourContent").appendChild(icon);
+            var alertDiv = document.createElement("div");
+            alertDiv.classList.add("alert");
+            alertDiv.classList.add("alert-danger");
+            alertDiv.setAttribute("role" , "alert");
+            var alertDivParagraph = document.createElement("p");
+            alertDivParagraph.appendChild(document.createTextNode("Unfortunately you can't open browser version on phone. we recommend use application on phone or open website on PC or Lap Top."))
+            alertDiv.appendChild(alertDivParagraph);
+            document.getElementById("tourContent").appendChild(alertDiv);
         }
     }
     else {
