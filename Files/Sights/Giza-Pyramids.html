@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../Layout/CSS/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="../Layout/JS/scripts.js"></script>
+    <script src="../Layout/Includes/sweetalert2.all.js"></script>
+    <link rel="icon" href="../Logos/eTourism1.png">
+    <title>E-Tourism at Giza Pyramids</title>
+</head>
+
+<body>
+    <header id="header">
+        <a href="../../Index.html" class="logo">E-Tourism</a>
+        <nav class="navigation">
+            <a href="#tour">Tour</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#more">Know More</a>
+        </nav>
+    </header>
+    <section class="main" id="main" style="--homeImageSrc: url(../../Backgrounds/Giza-Pyramids/home.jpg)">
+        <div>
+            <h2>Welcome at<br><span>The Pyramids of Giza</span></h2>
+            <a href="#tour" class="main-btn">Take a Tour</a>
+            <a href="#more" class="main-btn">Know More</a>
+        </div>
+    </section>
+    <section class="tour" id="tour">
+        <h2 class="title">Tour</h2>
+        <div class="content">
+            <iframe src="gizaPyramidsFiles/webgl/index.html" style="width: 100%; height: 720px;" id="iframeTour"></iframe>
+        </div>
+    </section>
+    <section class="gallery" id="gallery">
+        <h2 class="title">Gallery</h2>
+        <div class="content">
+            <div id="galleryImage" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#galleryImage" data-slide-to="1" class="active"></li>
+                    <li data-target="#galleryImage" data-slide-to="2"></li>
+                    <li data-target="#galleryImage" data-slide-to="3"></li>
+                    <li data-target="#galleryImage" data-slide-to="4"></li>
+                    <li data-target="#galleryImage" data-slide-to="5"></li>
+                    <li data-target="#galleryImage" data-slide-to="6"></li>
+                    <li data-target="#galleryImage" data-slide-to="7"></li>
+                    <li data-target="#galleryImage" data-slide-to="8"></li>
+                    <li data-target="#galleryImage" data-slide-to="9"></li>
+                    <li data-target="#galleryImage" data-slide-to="10"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="../Backgrounds/Giza-Pyramids/Gallery/1.png"width="1024px" height="576px">
+                        <div class="carousel-caption d-none d-md-block">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../Backgrounds/Giza-Pyramids/Gallery/2.png"width="1024px" height="576px">
+                        <div class="carousel-caption d-none d-md-block">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../Backgrounds/Giza-Pyramids/Gallery/3.png"width="1024px" height="576px">
+                        <div class="carousel-caption d-none d-md-block">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../Backgrounds/Giza-Pyramids/Gallery/4.png"width="1024px" height="576px">
+                        <div class="carousel-caption d-none d-md-block">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../Backgrounds/Giza-Pyramids/Gallery/5.png"width="1024px" height="576px">
+                        <div class="carousel-caption d-none d-md-block">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../Backgrounds/Giza-Pyramids/Gallery/6.png"width="1024px" height="576px">
+                        <div class="carousel-caption d-none d-md-block">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../Backgrounds/Giza-Pyramids/Gallery/7.png"width="1024px" height="576px">
+                        <div class="carousel-caption d-none d-md-block">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../Backgrounds/Giza-Pyramids/Gallery/8.png"width="1024px" height="576px">
+                        <div class="carousel-caption d-none d-md-block">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../Backgrounds/Giza-Pyramids/Gallery/9.png"width="1024px" height="576px">
+                        <div class="carousel-caption d-none d-md-block">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../Backgrounds/Giza-Pyramids/Gallery/10.png" width="1024px" height="576px">
+                        <div class="carousel-caption d-none d-md-block">
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#galleryImage" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#galleryImage" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="more" id="more">
+        <h2 class="title">Know more about The Pyramids of Giza</h2>
+        <div class="content">
+            <div title="Comming Soon" class="card">
+                <div class="icon">
+                    <i class="fa-solid fa-plane"></i>
+                </div>
+                <div class="info">
+                    <h3>Book your ticket</h3>
+                    <p>Book your ticket to Egypt<br>Travel and enjoy real tour at The Pyramids of Giza</p>
+                </div>
+            </div>
+            <div title="Comming Soon" class="card">
+                <div class="icon">
+                    <i class="fa-solid fa-comments"></i>
+                </div>
+                <div class="info">
+                    <h3>Chat with tour guide</h3>
+                    <p>Chat with tour guide and know more about The Pyramids of Giza</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer" style="--footerBacgroundColor: #000016; --footerSocialIconsBacgroundColor:#fff;">
+        <p class="footer-title">Copyrights @ <span>E-Tourism</span></p>
+        <div class="social-icons">
+            <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+        </div>
+    </footer>
+</body>
