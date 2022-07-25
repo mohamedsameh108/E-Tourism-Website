@@ -2,6 +2,7 @@ $(document).ready(function () {
     var sectionName;
     var path = window.location.pathname;
     var page = path.split("/").pop();
+    console.log(page);
     if (page == "Index.html") {
         sectionName = "#services";
         if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
@@ -23,6 +24,7 @@ $(document).ready(function () {
             icon.classList.add("fa-solid");
             icon.classList.add("fa-file-arrow-down");
             apkDownloader.appendChild(icon);
+            document.getElementById("tourContent").appendChild(apkDownloader);
         }
     }
     $("#header").hide();
