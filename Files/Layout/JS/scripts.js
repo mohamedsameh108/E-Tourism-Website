@@ -2,7 +2,7 @@ $(document).ready(function () {
     var sectionName;
     var path = window.location.pathname;
     var page = path.split("/");
-    if (page.includes("Files")) {
+    if (page.includes("files")) {
         sectionName = "#tour";
         if (!/Android|!webOS|!iPhone|!iPad|!iPod|!BlackBerry|!IEMobile|!Opera Mini/i.test(navigator.userAgent)) {
             Swal.fire("For the VR tour, Please use Mobile");
