@@ -1,9 +1,9 @@
 $(document).ready(function () {
-    var sectionName;
+    var section = "#services";
     var path = window.location.pathname;
     var page = path.split("/");
     if (page.includes("files")) {
-        sectionName = "#tour";
+        section = "#tour";
         if (!/Android|!webOS|!iPhone|!iPad|!iPod|!BlackBerry|!IEMobile|!Opera Mini/i.test(navigator.userAgent)) {
             Swal.fire("For the VR tour, Please use Mobile");
         };
@@ -20,7 +20,6 @@ $(document).ready(function () {
         }
     }
     else {
-        sectionName = "#services";
         if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
             Swal.fire("For the best experience on Website, Please use PC or Lab Top");
         };
@@ -28,7 +27,7 @@ $(document).ready(function () {
     $("#header").hide();
 
     $(window).scroll(function () {
-        if (isScrolledAfterElement(sectionName)) {
+        if (isScrolledAfterElement(section)) {
             $('#header').fadeIn();
         } else {
             $('#header').fadeOut();
